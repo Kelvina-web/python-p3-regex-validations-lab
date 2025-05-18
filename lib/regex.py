@@ -1,13 +1,13 @@
 import re
 
-# NOTE: There are only a few tests included, so multiple solutions will work.
-# Feel free to encourage students to find oversights and add tests to this lab!
+def name():
+    # Pattern for valid names (e.g., "John Cena")
+    return re.compile(r'^[A-Z][a-z]+(?: [A-Z][a-z]+)*$')
 
-name = r""
-name_regex = re.compile(name)
+def phone_number():
+    # Pattern for US phone numbers in various formats
+    return re.compile(r'^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$')
 
-phone_number = r""
-phone_regex = re.compile(phone_number)
-
-email_address = r""
-email_regex = re.compile(email_address)
+def email_address():
+    # Pattern for valid email addresses
+    return re.compile(r'^[\w.-]+@[\w-]+(?:\.[\w-]+)+$')
